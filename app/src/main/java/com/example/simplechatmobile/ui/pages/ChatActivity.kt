@@ -15,11 +15,11 @@ import com.example.simplechatmobile.util.SessionManager
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import android.widget.ArrayAdapter
+import com.example.simplechatmobile.ui.adapters.MessageAdapter
 
 class ChatActivity : AppCompatActivity() {
     private var chatId: Int = -1
-    private var senderId: Int = 1 // змінити на ID поточного користувача
+    private var senderId: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,7 +39,7 @@ class ChatActivity : AppCompatActivity() {
                 override fun onResponse(call: Call<List<Message>>, response: Response<List<Message>>) {
                     if (response.isSuccessful) {
                         val messages = response.body() ?: emptyList()
-                        val adapter = ArrayAdapter(this@ChatActivity, android.R.layout.simple_list_item_1, messages.map { it.content })
+                        val adapter = MessageAdapter(this@ChatActivity, messages)
                         listView.adapter = adapter
                     }
                 }

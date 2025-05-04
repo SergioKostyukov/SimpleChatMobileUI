@@ -10,4 +10,6 @@
     <color name="primary">#6200EE</color>
     <color name="primary_dark">#3700B3</color>
     <color name="accent">#03DAC5</color>
+    <color name="chat_item_default">#E3F2FD</color>
+    <color name="chat_item_pressed">#BBDEFB</color>
 </resources>

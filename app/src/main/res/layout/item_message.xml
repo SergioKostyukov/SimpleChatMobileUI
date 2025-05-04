@@ -1,0 +1,26 @@
+<!-- res/layout/item_message.xml -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dp"
+    android:gravity="start">
+
+    <TextView
+        android:id="@+id/textViewSenderName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:paddingBottom="4dp"
+        android:text="Sender Name" />
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/message_item_background"
+        android:textColor="#000000"
+        android:padding="10dp"
+        android:textSize="16sp" />
+</LinearLayout>

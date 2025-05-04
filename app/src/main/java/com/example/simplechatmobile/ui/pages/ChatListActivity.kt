@@ -2,7 +2,7 @@ package com.example.simplechatmobile.ui.pages
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.ArrayAdapter
+import com.example.simplechatmobile.ui.adapters.ChatAdapter
 import android.widget.ListView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -29,7 +29,7 @@ class ChatListActivity : AppCompatActivity() {
             override fun onResponse(call: Call<List<Chat>>, response: Response<List<Chat>>) {
                 if (response.isSuccessful) {
                     val chats = response.body() ?: emptyList()
-                    val adapter = ArrayAdapter(this@ChatListActivity, android.R.layout.simple_list_item_1, chats.map { it.name })
+                    val adapter = ChatAdapter(this@ChatListActivity, chats)
                     listView.adapter = adapter
                     listView.setOnItemClickListener { _, _, position, _ ->
                         val chat = chats[position]

@@ -19,9 +19,7 @@ import retrofit2.Response
 class AuthActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        Log.d("AuthActivity", "onCreate started")
         setContentView(R.layout.activity_auth)
-        Log.d("AuthActivity", "layout loaded")
 
         val emailInput = findViewById<EditText>(R.id.editTextEmail)
         val passwordInput = findViewById<EditText>(R.id.editTextPassword)
